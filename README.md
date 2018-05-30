@@ -8,9 +8,9 @@ On component render, the component will display an img tag rendering the `thumbn
 
 Include as dependency in `package.json`:
 
-`"preloaded-img": "github:ntslive/preloaded-img#1.0.0"`
+`"preloaded-img": "github:ntslive/preloaded-img#0.1.0"`
 
-Note that this requires the Git tag `1.0.0` to be present.
+Note that this requires the Git tag `0.1.0` to be present.
 
 Then run `npm install` as usual.
 
@@ -44,3 +44,7 @@ const IndexPage = (
 Run `npm run sample` to create the required javascript bundle.
 
 View the working example by opening `sample.html` directly in the browser.
+
+## Updating the package
+
+Run `npm run setup` to create a require pre-commit hook for the repository. This builds a babel'd `index.js` file in the `build` folder.

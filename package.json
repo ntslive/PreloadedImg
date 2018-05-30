@@ -1,12 +1,13 @@
 {
     "name": "preloaded-img",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "React Component for preloading imgs.",
     "main": "build/index.js",
     "scripts": {
         "build": "babel src -d build",
         "sample": "npm run build && browserify build/sample.js -o build/bundle.js && rm build/sample.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "setup": "cp pre-commit .git/hooks/."
     },
     "repository": {
         "type": "git",
