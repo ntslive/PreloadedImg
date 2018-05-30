@@ -1,6 +1,6 @@
 {
-    "name": "preloadedimg",
-    "version": "0.0.0",
+    "name": "preloaded-img",
+    "version": "1.0.0",
     "description": "React Component for preloading imgs.",
     "main": "build/index.js",
     "scripts": {

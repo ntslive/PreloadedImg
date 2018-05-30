@@ -8,9 +8,9 @@ On component render, the component will display an img tag rendering the `thumbn
 
 Include as dependency in `package.json`:
 
-TODO: `"text-sanitizer": "github:ntslive/text-sanitizer#0.0.0"`
+`"preloaded-img": "github:ntslive/preloaded-img#1.0.0"`
 
-Note that this requires the Git tag `0.0.0` to be present.
+Note that this requires the Git tag `1.0.0` to be present.
 
 Then run `npm install` as usual.
 
@@ -41,4 +41,6 @@ const IndexPage = (
 
 ## Viewing a sample
 
-Run `npm run sample` and open the `sample.html` file in the root of the repo.
+Run `npm run sample` to create the required javascript bundle.
+
+View the working example by opening `sample.html` directly in the browser.
