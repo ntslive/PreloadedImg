@@ -2,8 +2,10 @@
     "name": "preloadedimg",
     "version": "0.0.0",
     "description": "React Component for preloading imgs.",
-    "main": "index.jsx",
+    "main": "build/index.js",
     "scripts": {
+        "build": "babel src -d build",
+        "sample": "npm run build && browserify build/sample.js -o build/bundle.js && rm build/sample.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -20,5 +22,12 @@
         "prop-types": "^15.6.1",
         "react": "^16.4.0",
         "react-dom": "^16.4.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "browserify": "^16.2.2"
     }
 }
