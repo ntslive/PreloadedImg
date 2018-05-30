@@ -7,31 +7,29 @@ class PreloadedImg extends React.Component {
         super(props);
 
         this.state = {
-            image: props.thumbnailUrl,
+            imgSrc: props.thumbnailUrl,
         };
     }
 
     componentDidMount() {
-        const that = this;
-
         const newImage = new Image();
-        newImage.onload = function() {
-            that.setState({
-                image: that.props.imageUrl,
+        newImage.onload = () => {
+            this.setState({
+                imgSrc: this.props.imageUrl,
             });
         };
         newImage.src = this.props.imageUrl;
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return this.state.image !== nextState.image;
+        return this.state.imgSrc !== nextState.imgSrc;
     }
 
     render() {
-        const {id, className, image, description} = this.props;
+        const {id, className, description} = this.props;
 
         return (
-            <img id={id} className={className} src={image} alt={description}/>
+            <img id={id} className={className} src={this.state.imgSrc} alt={description}/>
         );
     }
 }

@@ -28,14 +28,17 @@ const IndexPage = (
         />
     </div>
 )
-
 ```
 
 ### Required Properties:
 
-* `imageUrl` The URL of the final (larger) image to be used within the `img` element.
-* `thumbnailUrl` the URL of the thumbnail image to be used initiall within the `img` element. 100x100 / 200x200 sized images are recommended.
+* `thumbnailUrl` the URL of the thumbnail image to be used initially within the `img` element. Roughly 200x200 sized images are recommended.
+* `imageUrl` The URL of the final image to be used within the `img` element.
 
 ### Optional Properties:
 
-* `description` The image description which will be used as the alt tag within the rendered `img` element.
+* `description` The text to be used within the alt tag of the `img` element.
+
+## Viewing a sample
+
+Run `npm run sample` and open the `sample.html` file in the root of the repo.
