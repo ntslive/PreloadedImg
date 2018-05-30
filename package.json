@@ -1,0 +1,24 @@
+{
+    "name": "preloadedimg",
+    "version": "0.0.0",
+    "description": "React Component for preloading imgs.",
+    "main": "index.jsx",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ntslive/PreloadedImg.git"
+    },
+    "author": "James Burke NTS Live",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ntslive/PreloadedImg/issues"
+    },
+    "homepage": "https://github.com/ntslive/PreloadedImg#readme",
+    "dependencies": {
+        "prop-types": "^15.6.1",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0"
+    }
+}
