@@ -7,40 +7,42 @@ class PreloadedImg extends React.Component {
         super(props);
 
         this.state = {
-            imgSrc: props.thumbnailUrl,
+            src: props.thumbnailUrl,
+            srcSet: null,
         };
     }
 
     componentDidMount() {
-        const newImage = new Image();
-        newImage.onload = () => {
+        const image = new Image();
+        image.onload = () => {
             this.setState({
-                imgSrc: this.props.imageUrl,
+                src: this.props.imageUrl,
+                srcSet: this.props.srcSet,
             });
         };
-        newImage.src = this.props.imageUrl;
+        image.src = this.props.thumbnailUrl;
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return this.state.imgSrc !== nextState.imgSrc;
+        return this.state.src !== nextState.src
+            || this.state.srcSet !== nextState.srcSet;
     }
 
     render() {
-        const {id, className, description} = this.props;
-
         return (
-            <img id={id} className={className} src={this.state.imgSrc} alt={description}/>
+            <img id={this.props.id} className={this.props.className} src={this.state.src} sizes={this.props.sizes} srcSet={this.state.srcSet} alt={this.props.description} />
         );
     }
 }
 
 PreloadedImg.propTypes = {
+    sizes: PropTypes.string,
+    srcSet: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string.isRequired,
-    description: PropTypes.string,
-
     id: PropTypes.string,
     className: PropTypes.string,
+    description: PropTypes.string,
 };
 
 module.exports = PreloadedImg;
