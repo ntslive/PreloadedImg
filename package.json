@@ -20,12 +20,11 @@
     },
     "homepage": "https://github.com/ntslive/PreloadedImg#readme",
     "peerDependencies": {
+        "prop-types": "^15.6.1",
         "react": "^16.4.0",
         "react-dom": "^16.4.0"
     },
-    "dependencies": {
-        "prop-types": "^15.6.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
