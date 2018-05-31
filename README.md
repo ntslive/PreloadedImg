@@ -39,12 +39,12 @@ const IndexPage = (
 
 * `description` The text to be used within the alt tag of the `img` element.
 
-## Viewing a sample
+## Updating the package
+
+Run `npm run setup` to create a require pre-commit hook for the repository and install development dependencies. This builds a babel'd `index.js` file in the `build` folder.
+
+### Viewing a sample
 
 Run `npm run sample` to create the required javascript bundle.
 
 View the working example by opening `sample.html` directly in the browser.
-
-## Updating the package
-
-Run `npm run setup` to create a require pre-commit hook for the repository. This builds a babel'd `index.js` file in the `build` folder.
