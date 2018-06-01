@@ -19,7 +19,8 @@ var PreloadedImg = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (PreloadedImg.__proto__ || Object.getPrototypeOf(PreloadedImg)).call(this, props));
 
         _this.state = {
-            imgSrc: props.thumbnailUrl
+            src: props.thumbnailUrl,
+            srcSet: null
         };
         return _this;
     }
@@ -29,29 +30,24 @@ var PreloadedImg = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            var newImage = new Image();
-            newImage.onload = function () {
+            var image = new Image();
+            image.onload = function () {
                 _this2.setState({
-                    imgSrc: _this2.props.imageUrl
+                    src: _this2.props.imageUrl,
+                    srcSet: _this2.props.srcSet
                 });
             };
-            newImage.src = this.props.imageUrl;
+            image.src = this.props.thumbnailUrl;
         }
     }, {
         key: 'shouldComponentUpdate',
         value: function shouldComponentUpdate(nextProps, nextState) {
-            return this.state.imgSrc !== nextState.imgSrc;
+            return this.state.src !== nextState.src || this.state.srcSet !== nextState.srcSet;
         }
     }, {
         key: 'render',
         value: function render() {
-            var _props = this.props,
-                id = _props.id,
-                className = _props.className,
-                description = _props.description;
-
-
-            return React.createElement('img', { id: id, className: className, src: this.state.imgSrc, alt: description });
+            return React.createElement('img', { id: this.props.id, className: this.props.className, src: this.state.src, sizes: this.props.sizes, srcSet: this.state.srcSet, alt: this.props.description });
         }
     }]);
 
@@ -59,12 +55,13 @@ var PreloadedImg = function (_React$Component) {
 }(React.Component);
 
 PreloadedImg.propTypes = {
+    sizes: PropTypes.string,
+    srcSet: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string.isRequired,
-    description: PropTypes.string,
-
     id: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    description: PropTypes.string
 };
 
 module.exports = PreloadedImg;
