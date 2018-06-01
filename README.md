@@ -17,7 +17,7 @@ Then run `npm install` as usual.
 ## Usage
 
 ```
-const PreloadedImg = require('PreloadedImg');
+const PreloadedImg = require('preloaded-img');
 
 const IndexPage = (
     <div>
