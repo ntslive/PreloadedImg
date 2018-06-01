@@ -8,9 +8,9 @@ On component render, the component will display an img tag rendering the `thumbn
 
 Include as dependency in `package.json`:
 
-`"preloaded-img": "github:ntslive/preloaded-img#0.1.0"`
+`"preloaded-img": "github:ntslive/preloaded-img#0.2.0"`
 
-Note that this requires the Git tag `0.1.0` to be present.
+Note that this requires the Git tag `0.2.0` to be present.
 
 Then run `npm install` as usual.
 
