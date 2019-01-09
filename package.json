@@ -11,14 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ntslive/PreloadedImg.git"
+        "url": "https://github.com/ntslive/preloaded-img.git"
     },
-    "author": "James Burke NTS Live",
+    "author": "James Burke NTS Live (https://www.nts.live)",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/ntslive/PreloadedImg/issues"
+        "url": "https://github.com/ntslive/preloaded-img/issues"
     },
-    "homepage": "https://github.com/ntslive/PreloadedImg#readme",
+    "homepage": "https://github.com/ntslive/preloaded-img#readme",
     "peerDependencies": {
         "prop-types": "^15.6.1",
         "react": "^16.4.0",
