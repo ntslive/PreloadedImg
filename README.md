@@ -1,6 +1,6 @@
 # PreloadedImg
 
-Small React Component used for preloading img elements. Used and created by @ntslive.
+Small React Component used for preloading img elements. Used and created by [NTS](https://www.nts.live).
 
 On component render, the component will display an img tag rendering the `thumbnailUrl` image. Once the thumbnail has been downloaded, the component will request a final image based on the optional `srcSet` property if supplied. If `srcSet` is not supplied, or if `srcset` is not supported by the browser, the final image is based on `imgUrl`. Once the final image has been downloaded by the browser, the component will re-render using this image.
 
